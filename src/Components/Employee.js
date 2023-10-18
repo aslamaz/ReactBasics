@@ -1,10 +1,11 @@
+
 import { useEffect, useState } from 'react';
-import { Apiexample2 } from '../Helper/Apiexample2';
+import {EmployeeApi} from '../Helper/ApiExample'
 import { Container, Row } from 'react-bootstrap';
 import Employees from './Employees';
 
 const Employee = () => {
-    const [Employee, setEmployee] = useState('');
+    const [Employee, setEmployee] = useState([]);
 
     useEffect(()=>{
         FetchData();
@@ -12,9 +13,10 @@ const Employee = () => {
 
       const FetchData = async () => {
         try {
-          const data = await Apiexample2();
+          const data = await EmployeeApi();
           console.log(data);
           setEmployee(data)
+         
         } catch (error) {
           console.error(error);
         }
