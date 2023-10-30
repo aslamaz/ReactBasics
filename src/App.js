@@ -7,6 +7,7 @@ import Cards from "./Components/Cards";
 import Employee from "./Components/Employee"
 import LoginPage from "./Components/LoginPage";
 import RegistrationPage from "./Components/RegistrationPage";
+import TicTacToe from "./Components/TicTacToe";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LoginPage/>}/>
         <Route path="RegistrationPage" element={<RegistrationPage/>}/>
-
+        <Route path="TicTacToe" element={<TicTacToe/>}/>
         <Route path="LocalStorageExample" element={<LocalStorageExample/>}/>
         <Route path="products" element={<Products/>}/>
         <Route path="Cards" element={<Cards/>}/>
